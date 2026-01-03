@@ -1,0 +1,228 @@
+<Kalkulator>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.1, 0.1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    TextInput:
+        id: input_a
+        hint_text: "Masukkan angka pertama"
+        multiline: False
+        input_filter: 'float'
+        foreground_color: 1, 1, 1, 1
+        background_color: 0.2, 0.2, 0.2, 1
+
+    TextInput:
+        id: input_b
+        hint_text: "Masukkan angka kedua (opsional)"
+        multiline: False
+        input_filter: 'float'
+        foreground_color: 1, 1, 1, 1
+        background_color: 0.2, 0.2, 0.2, 1
+
+    GridLayout:
+        cols: 4
+        spacing: 5
+        size_hint_y: None
+        height: self.minimum_height
+
+        Button: text: "+"; on_press: root.hitung("+")
+        Button: text: "-"; on_press: root.hitung("-")
+        Button: text: "*"; on_press: root.hitung("*")
+        Button: text: "/"; on_press: root.hitung("/")
+
+        Button: text: "^"; on_press: root.hitung("^")
+        Button: text: "%"; on_press: root.hitung("%")
+        Button: text: "√"; on_press: root.hitung("√")
+        Button: text: "Log"; on_press: root.lihat_log()
+
+    Label:
+        id: output
+        text: "Hasil:"
+        color: 1, 1, 1, 1
+        font_size: 18
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 15
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "LOGIN"
+            font_size: 24
+            color: 1,1,1,1
+
+        TextInput:
+            id: username
+            hint_text: "Username"
+            multiline: False
+            foreground_color: 1,1,1,1
+            background_color: 0.2,0.2,0.2,1
+
+        TextInput:
+            id: password
+            hint_text: "Password"
+            password: True
+            multiline: False
+            foreground_color: 1,1,1,1
+            background_color: 0.2,0.2,0.2,1
+
+        Button:
+            text: "Login"
+            on_press: root.login()
+
+<KalkulatorScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        TextInput:
+            id: input_a
+            hint_text: "Masukkan angka pertama"
+            multiline: False
+            input_filter: 'float'
+            foreground_color: 1, 1, 1, 1
+            background_color: 0.2, 0.2, 0.2, 1
+
+        TextInput:
+            id: input_b
+            hint_text: "Masukkan angka kedua (opsional)"
+            multiline: False
+            input_filter: 'float'
+            foreground_color: 1, 1, 1, 1
+            background_color: 0.2, 0.2, 0.2, 1
+
+        GridLayout:
+            cols: 4
+            spacing: 5
+            size_hint_y: None
+            height: self.minimum_height
+
+            Button: text: "+"; on_press: root.hitung("+")
+            Button: text: "-"; on_press: root.hitung("-")
+            Button: text: "*"; on_press: root.hitung("*")
+            Button: text: "/"; on_press: root.hitung("/")
+
+            Button: text: "^"; on_press: root.hitung("^")
+            Button: text: "%"; on_press: root.hitung("%")
+            Button: text: "√"; on_press: root.hitung("√")
+            Button: text: "Log"; on_press: root.lihat_log()
+
+        Label:
+            id: output
+            text: "Hasil:"
+            color: 1, 1, 1, 1
+            font_size: 18
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 15
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "LOGIN"
+            font_size: 24
+            color: 1,1,1,1
+
+        TextInput:
+            id: username
+            hint_text: "Username"
+            multiline: False
+            foreground_color: 1,1,1,1
+            background_color: 0.2,0.2,0.2,1
+
+        TextInput:
+            id: password
+            hint_text: "Password"
+            password: True
+            multiline: False
+            foreground_color: 1,1,1,1
+            background_color: 0.2,0.2,0.2,1
+
+        BoxLayout:
+            size_hint_y: None
+            height: "40dp"
+            CheckBox:
+                id: remember_checkbox
+                active: False
+            Label:
+                text: "Remember Me"
+                color: 1,1,1,1
+
+        Button:
+            text: "Login"
+            on_press: root.login()
+
+<KalkulatorScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        TextInput:
+            id: input_a
+            hint_text: "Masukkan angka pertama"
+            multiline: False
+            input_filter: 'float'
+            foreground_color: 1, 1, 1, 1
+            background_color: 0.2, 0.2, 0.2, 1
+
+        TextInput:
+            id: input_b
+            hint_text: "Masukkan angka kedua (opsional)"
+            multiline: False
+            input_filter: 'float'
+            foreground_color: 1, 1, 1, 1
+            background_color: 0.2, 0.2, 0.2, 1
+
+        GridLayout:
+            cols: 4
+            spacing: 5
+            size_hint_y: None
+            height: self.minimum_height
+
+            Button: text: "+"; on_press: root.hitung("+")
+            Button: text: "-"; on_press: root.hitung("-")
+            Button: text: "*"; on_press: root.hitung("*")
+            Button: text: "/"; on_press: root.hitung("/")
+
+            Button: text: "^"; on_press: root.hitung("^")
+            Button: text: "%"; on_press: root.hitung("%")
+            Button: text: "√"; on_press: root.hitung("√")
+            Button: text: "Log"; on_press: root.lihat_log()
+
+        Label:
+            id: output
+            text: "Hasil:"
+            color: 1, 1, 1, 1
+            font_size: 18
